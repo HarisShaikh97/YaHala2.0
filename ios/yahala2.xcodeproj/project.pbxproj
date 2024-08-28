@@ -8,13 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* yahala2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* yahala2Tests.m */; };
+		01122B1B635A4A9E8B76A273 /* Genos-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF9BAC43BA9C457F93B89D63 /* Genos-Black.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-yahala2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-yahala2.a */; };
+		10D0E7FB302B4FD1A9BB502E /* Genos-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 959D9F29531F408BAE45A4F4 /* Genos-ExtraLightItalic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1D528756298446BDB26C79B5 /* Genos-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DC4C910B6044D4F99DBD8A3 /* Genos-BlackItalic.ttf */; };
+		2DE952629177439E9DB5954F /* Genos-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBD43D029B024119958891B1 /* Genos-Regular.ttf */; };
+		30DFABA134D44505AAA67228 /* Genos-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35EB10CC891044CCB3D573B4 /* Genos-MediumItalic.ttf */; };
+		40AC2945B7344AFFA2587B19 /* Genos-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F78B8FD3CC7245EEBF41E0D8 /* Genos-ThinItalic.ttf */; };
+		4CDA8649EAA44AD4B154239F /* Genos-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0C02AF240794C698CD04974 /* Genos-Bold.ttf */; };
+		594D4B56C4A244B18763C281 /* Genos-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF287044A59B42AA83554B3C /* Genos-Light.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-yahala2-yahala2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-yahala2-yahala2Tests.a */; };
+		7A90EF4CF33147D4A7D8224F /* Genos-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F03284B61C14EE3BD8AA22F /* Genos-Thin.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		86935915DE9D43A3BBA6DA86 /* Genos-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E919A38D43934239B396A82B /* Genos-LightItalic.ttf */; };
+		9E5A5FCB505743D2B781451F /* Genos-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45AED44A8D794890B0B44C88 /* Genos-Medium.ttf */; };
+		B3BE803957C14952AC879AFB /* Genos-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19FBB09654D24403BB615874 /* Genos-ExtraLight.ttf */; };
+		B7DC3D29C48E4F2C884E85DD /* Genos-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD48CA6023894FD594B8E577 /* Genos-Italic.ttf */; };
 		B991949D2C1D1C3708471757 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CA3DE024044710DC831B7E84 /* PrivacyInfo.xcprivacy */; };
+		EA211D16E9D64B448BB4147B /* Genos-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 548B12B920FC493289893A5B /* Genos-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +53,28 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = yahala2/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = yahala2/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-yahala2-yahala2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-yahala2-yahala2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19FBB09654D24403BB615874 /* Genos-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-ExtraLight.ttf"; path = "../assets/fonts/Genos-ExtraLight.ttf"; sourceTree = "<group>"; };
+		35EB10CC891044CCB3D573B4 /* Genos-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-MediumItalic.ttf"; path = "../assets/fonts/Genos-MediumItalic.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-yahala2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahala2.debug.xcconfig"; path = "Target Support Files/Pods-yahala2/Pods-yahala2.debug.xcconfig"; sourceTree = "<group>"; };
+		3DC4C910B6044D4F99DBD8A3 /* Genos-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-BlackItalic.ttf"; path = "../assets/fonts/Genos-BlackItalic.ttf"; sourceTree = "<group>"; };
+		45AED44A8D794890B0B44C88 /* Genos-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-Medium.ttf"; path = "../assets/fonts/Genos-Medium.ttf"; sourceTree = "<group>"; };
+		548B12B920FC493289893A5B /* Genos-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-BoldItalic.ttf"; path = "../assets/fonts/Genos-BoldItalic.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-yahala2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahala2.release.xcconfig"; path = "Target Support Files/Pods-yahala2/Pods-yahala2.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-yahala2-yahala2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahala2-yahala2Tests.debug.xcconfig"; path = "Target Support Files/Pods-yahala2-yahala2Tests/Pods-yahala2-yahala2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-yahala2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-yahala2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = yahala2/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-yahala2-yahala2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahala2-yahala2Tests.release.xcconfig"; path = "Target Support Files/Pods-yahala2-yahala2Tests/Pods-yahala2-yahala2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		959D9F29531F408BAE45A4F4 /* Genos-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-ExtraLightItalic.ttf"; path = "../assets/fonts/Genos-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		9F03284B61C14EE3BD8AA22F /* Genos-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-Thin.ttf"; path = "../assets/fonts/Genos-Thin.ttf"; sourceTree = "<group>"; };
+		BF287044A59B42AA83554B3C /* Genos-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-Light.ttf"; path = "../assets/fonts/Genos-Light.ttf"; sourceTree = "<group>"; };
+		BF9BAC43BA9C457F93B89D63 /* Genos-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-Black.ttf"; path = "../assets/fonts/Genos-Black.ttf"; sourceTree = "<group>"; };
+		C0C02AF240794C698CD04974 /* Genos-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-Bold.ttf"; path = "../assets/fonts/Genos-Bold.ttf"; sourceTree = "<group>"; };
 		CA3DE024044710DC831B7E84 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = yahala2/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		DD48CA6023894FD594B8E577 /* Genos-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-Italic.ttf"; path = "../assets/fonts/Genos-Italic.ttf"; sourceTree = "<group>"; };
+		E919A38D43934239B396A82B /* Genos-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-LightItalic.ttf"; path = "../assets/fonts/Genos-LightItalic.ttf"; sourceTree = "<group>"; };
+		EBD43D029B024119958891B1 /* Genos-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-Regular.ttf"; path = "../assets/fonts/Genos-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F78B8FD3CC7245EEBF41E0D8 /* Genos-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Genos-ThinItalic.ttf"; path = "../assets/fonts/Genos-ThinItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +139,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6D2A79FC86B44C43A9C5BBC3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BAC43BA9C457F93B89D63 /* Genos-Black.ttf */,
+				3DC4C910B6044D4F99DBD8A3 /* Genos-BlackItalic.ttf */,
+				C0C02AF240794C698CD04974 /* Genos-Bold.ttf */,
+				548B12B920FC493289893A5B /* Genos-BoldItalic.ttf */,
+				19FBB09654D24403BB615874 /* Genos-ExtraLight.ttf */,
+				959D9F29531F408BAE45A4F4 /* Genos-ExtraLightItalic.ttf */,
+				DD48CA6023894FD594B8E577 /* Genos-Italic.ttf */,
+				BF287044A59B42AA83554B3C /* Genos-Light.ttf */,
+				E919A38D43934239B396A82B /* Genos-LightItalic.ttf */,
+				45AED44A8D794890B0B44C88 /* Genos-Medium.ttf */,
+				35EB10CC891044CCB3D573B4 /* Genos-MediumItalic.ttf */,
+				EBD43D029B024119958891B1 /* Genos-Regular.ttf */,
+				9F03284B61C14EE3BD8AA22F /* Genos-Thin.ttf */,
+				F78B8FD3CC7245EEBF41E0D8 /* Genos-ThinItalic.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +177,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				6D2A79FC86B44C43A9C5BBC3 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -249,6 +300,20 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				B991949D2C1D1C3708471757 /* PrivacyInfo.xcprivacy in Resources */,
+				01122B1B635A4A9E8B76A273 /* Genos-Black.ttf in Resources */,
+				1D528756298446BDB26C79B5 /* Genos-BlackItalic.ttf in Resources */,
+				4CDA8649EAA44AD4B154239F /* Genos-Bold.ttf in Resources */,
+				EA211D16E9D64B448BB4147B /* Genos-BoldItalic.ttf in Resources */,
+				B3BE803957C14952AC879AFB /* Genos-ExtraLight.ttf in Resources */,
+				10D0E7FB302B4FD1A9BB502E /* Genos-ExtraLightItalic.ttf in Resources */,
+				B7DC3D29C48E4F2C884E85DD /* Genos-Italic.ttf in Resources */,
+				594D4B56C4A244B18763C281 /* Genos-Light.ttf in Resources */,
+				86935915DE9D43A3BBA6DA86 /* Genos-LightItalic.ttf in Resources */,
+				9E5A5FCB505743D2B781451F /* Genos-Medium.ttf in Resources */,
+				30DFABA134D44505AAA67228 /* Genos-MediumItalic.ttf in Resources */,
+				2DE952629177439E9DB5954F /* Genos-Regular.ttf in Resources */,
+				7A90EF4CF33147D4A7D8224F /* Genos-Thin.ttf in Resources */,
+				40AC2945B7344AFFA2587B19 /* Genos-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,61 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Genos-Black.ttf",
+      "sha1": "b7118540f7687dd426905df8f82b470721650ad1"
+    },
+    {
+      "path": "assets/fonts/Genos-BlackItalic.ttf",
+      "sha1": "af9cae77a574b8323dc8d9a9fe6871f993dc3d72"
+    },
+    {
+      "path": "assets/fonts/Genos-Bold.ttf",
+      "sha1": "b81b91f608ec8e518991473a6c943477781a6e2f"
+    },
+    {
+      "path": "assets/fonts/Genos-BoldItalic.ttf",
+      "sha1": "38622f85d17922ca620a9be546f0a8f1e3dfd6bd"
+    },
+    {
+      "path": "assets/fonts/Genos-ExtraLight.ttf",
+      "sha1": "a53aa385e251245de934e21228ba30d3fb611216"
+    },
+    {
+      "path": "assets/fonts/Genos-ExtraLightItalic.ttf",
+      "sha1": "22bf4543d3d57ad264128da742c00eb6c9ecea8e"
+    },
+    {
+      "path": "assets/fonts/Genos-Italic.ttf",
+      "sha1": "83fab6c3460a2134bffd3e5b85f932e7442c3a06"
+    },
+    {
+      "path": "assets/fonts/Genos-Light.ttf",
+      "sha1": "71095b00c72aa357f14fbba7f6650be72c932600"
+    },
+    {
+      "path": "assets/fonts/Genos-LightItalic.ttf",
+      "sha1": "97ad5ad112de1ebf7a24c57290c2f19ceb475029"
+    },
+    {
+      "path": "assets/fonts/Genos-Medium.ttf",
+      "sha1": "6533bab9600e20df53d121e17fc3d5be839dfc7d"
+    },
+    {
+      "path": "assets/fonts/Genos-MediumItalic.ttf",
+      "sha1": "9499b5383e48f7d4d3d9a8f1fa754c98fd065d4a"
+    },
+    {
+      "path": "assets/fonts/Genos-Regular.ttf",
+      "sha1": "1986801d0b302ed1eceaefbc1c00a8bb1bf9a532"
+    },
+    {
+      "path": "assets/fonts/Genos-Thin.ttf",
+      "sha1": "15db5649d56a10ee7d5de4bc40051c5b425571b0"
+    },
+    {
+      "path": "assets/fonts/Genos-ThinItalic.ttf",
+      "sha1": "bcf0f41e5eb3b01119a070e443e8a1b9eb15a720"
+    }
+  ]
+}
