@@ -6,6 +6,8 @@ import Login from "./screens/login/Login"
 import ResetPassword from "./screens/reset-password/ResetPassword"
 import VerificationCode from "./screens/verification-code/VerificationCode"
 import CreatePassword from "./screens/create-password/CreatePassword"
+import SelectLanguage from "./screens/select-language/SelectLanguage"
+import SignUpSelectLanguage from "./screens/sign-up-select-language/SignUpSelectLanguage"
 
 const Stack = createNativeStackNavigator()
 
@@ -21,6 +23,11 @@ export default function App() {
           <Stack.Screen name="reset-password" component={ResetPassword} />
           <Stack.Screen name="verification-code" component={VerificationCode} />
           <Stack.Screen name="create-password" component={CreatePassword} />
+          <Stack.Screen name="select-language" component={SelectLanguage} />
+          <Stack.Screen
+            name="sign-up-select-language"
+            component={SignUpSelectLanguage}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

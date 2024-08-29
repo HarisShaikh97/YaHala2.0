@@ -15,15 +15,24 @@ export default function FooterNav() {
     <View style={styles.footerWrapper}>
       <SafeAreaView style={styles.footerContainer}>
         <TouchableOpacity
-          style={[styles.navButton, styles.navButtonUnSelected]}
+          style={[
+            styles.navButton,
+            route.name === "select-language"
+              ? styles.navButtonSelected
+              : styles.navButtonUnSelected
+          ]}
           onPress={() => {
-            // if (pathname !== "/languages") {
-            // 	router.navigate("/languages")
-            // }
+            if (route?.name !== "select-language") {
+              navigation.navigate("select-language")
+            }
           }}
         >
           <Image
-            source={require("../../assets/icons/language.png")}
+            source={
+              route.name === "select-language"
+                ? require("../../assets/icons/language-white.png")
+                : require("../../assets/icons/language.png")
+            }
             style={styles.navIcon}
             resizeMode="contain"
           />
@@ -52,14 +61,14 @@ export default function FooterNav() {
               : styles.navButtonUnSelected
           ]}
           onPress={() => {
-            if (route?.name !== "login") {
+            if (route.name !== "login") {
               navigation.navigate("login")
             }
           }}
         >
           <Image
             source={
-              route?.name === "login"
+              route.name === "login"
                 ? require("../../assets/icons/sign-in-white.png")
                 : require("../../assets/icons/sign-in.png")
             }
@@ -68,15 +77,24 @@ export default function FooterNav() {
           />
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.navButton, styles.navButtonUnSelected]}
+          style={[
+            styles.navButton,
+            route.name.includes("sign-up")
+              ? styles.navButtonSelected
+              : styles.navButtonUnSelected
+          ]}
           onPress={() => {
-            // if (!pathname?.includes("/sign-up")) {
-            // 	router.navigate("/sign-up/select-language")
-            // }
+            if (route.name !== "sign-up-select-language") {
+              navigation.navigate("sign-up-select-language")
+            }
           }}
         >
           <Image
-            source={require("../../assets/icons/sign-up.png")}
+            source={
+              route.name.includes("sign-up")
+                ? require("../../assets/icons/sign-up-white.png")
+                : require("../../assets/icons/sign-up.png")
+            }
             style={styles.navIcon}
             resizeMode="contain"
           />

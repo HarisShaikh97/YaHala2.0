@@ -1,19 +1,12 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native"
-import { Image } from "expo-image"
-import { useFonts } from "expo-font"
+import React from "react"
+import { View, Image, Text, TouchableOpacity, StyleSheet } from "react-native"
 import PropTypes from "prop-types"
-import AntDesign from "@expo/vector-icons/AntDesign"
 
 export default function LanguageOption({
   selectedLanguage,
   setSelectedLanguage,
   item
 }) {
-  const [fontsLoaded] = useFonts({
-    "Genos-Regular": require("../../assets/fonts/Genos/fonts/ttf/Genos-Regular.ttf"),
-    "Genos-Medium": require("../../assets/fonts/Genos/fonts/ttf/Genos-Medium.ttf")
-  })
-
   return (
     <TouchableOpacity
       style={[
@@ -32,18 +25,16 @@ export default function LanguageOption({
           style={styles.languageIcon}
           contentFit="cover"
         />
-        {fontsLoaded && (
-          <Text
-            style={[
-              styles.languageTitleText,
-              selectedLanguage?.id === item?.id
-                ? styles.selectedLanguageTitleText
-                : styles.unSelectedLanguageTitleText
-            ]}
-          >
-            {item?.title}
-          </Text>
-        )}
+        <Text
+          style={[
+            styles.languageTitleText,
+            selectedLanguage?.id === item?.id
+              ? styles.selectedLanguageTitleText
+              : styles.unSelectedLanguageTitleText
+          ]}
+        >
+          {item?.title}
+        </Text>
       </View>
       <View
         style={[
@@ -54,7 +45,11 @@ export default function LanguageOption({
         ]}
       >
         {selectedLanguage?.id === item?.id && (
-          <AntDesign name="check" size={15} color="#316AAC" />
+          <Image
+            source={require("../../assets/icons/check.png")}
+            style={styles.checkIcon}
+            resizeMode="contain"
+          />
         )}
       </View>
     </TouchableOpacity>
@@ -104,6 +99,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: "center",
     justifyContent: "center"
+  },
+  checkIcon: {
+    height: 15,
+    width: 15
   },
   checkBoxChecked: {
     backgroundColor: "white"

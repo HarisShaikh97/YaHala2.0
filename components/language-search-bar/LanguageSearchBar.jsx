@@ -1,18 +1,19 @@
-import { View, TextInput, StyleSheet } from "react-native"
-import { useFonts } from "expo-font"
-import AntDesign from "@expo/vector-icons/AntDesign"
+import React from "react"
+import { View, Image, TextInput, StyleSheet } from "react-native"
 
 export default function LanguageSearchBar() {
-  const [fontsLoaded] = useFonts({
-    "Genos-Regular": require("../../assets/fonts/Genos/fonts/ttf/Genos-Regular.ttf")
-  })
-
   return (
     <View style={styles.searchBarContainer}>
-      <AntDesign name="search1" size={20} color="#64748B" />
-      {fontsLoaded && (
-        <TextInput style={styles.inputField} placeholder="Search language..." />
-      )}
+      <Image
+        source={require("../../assets/icons/search.png")}
+        style={styles.searchBarIcon}
+        resizeMode="contain"
+      />
+      <TextInput
+        style={styles.inputField}
+        placeholder="Search language..."
+        placeholderTextColor={"gray"}
+      />
     </View>
   )
 }
@@ -27,6 +28,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 10,
     paddingHorizontal: 15
+  },
+  searchBarIcon: {
+    height: 20,
+    width: 20
   },
   inputField: {
     flex: 1,
