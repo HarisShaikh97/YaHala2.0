@@ -7,10 +7,13 @@ import {
   TouchableOpacity,
   StyleSheet
 } from "react-native"
+import { useNavigation } from "@react-navigation/native"
 import FormButton from "../../components/form-button/FormButton"
 import FooterNav from "../../components/footer-nav/FooterNav"
 
 export default function Login() {
+  const navigation = useNavigation()
+
   const [isEmailFocused, setIsEmailFocused] = useState(false)
   const [isPasswordFocused, setIsPasswordFocused] = useState(false)
 
@@ -60,7 +63,7 @@ export default function Login() {
         <TouchableOpacity
           style={styles.forgotPasswordButton}
           onPress={() => {
-            // router.navigate("/forget-password/reset-password")
+            navigation.navigate("reset-password")
           }}
         >
           <Text style={styles.forgotPasswordButtonText}>Forgot password?</Text>

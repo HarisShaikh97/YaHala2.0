@@ -1,23 +1,11 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Modal,
-  Platform,
-  StyleSheet
-} from "react-native"
-import { useRouter } from "expo-router"
-import { BlurView } from "expo-blur"
-import { useFonts } from "expo-font"
+import React from "react"
+import { View, Text, TouchableOpacity, Modal, StyleSheet } from "react-native"
+import { useNavigation } from "@react-navigation/native"
+import { BlurView } from "@react-native-community/blur"
 import PropTypes from "prop-types"
 
 export default function ForgetPasswordPopup({ showPopup, setShowPopup }) {
-  const router = useRouter()
-
-  const [fontsLoaded] = useFonts({
-    "Genos-Medium": require("../../assets/fonts/Genos/fonts/ttf/Genos-Medium.ttf"),
-    "Genos-Regular": require("../../assets/fonts/Genos/fonts/ttf/Genos-Regular.ttf")
-  })
+  const navigation = useNavigation()
 
   return (
     <Modal
@@ -29,30 +17,29 @@ export default function ForgetPasswordPopup({ showPopup, setShowPopup }) {
       }}
     >
       <BlurView
-        intensity={Platform.OS === "android" ? 150 : 15}
         style={styles.popupWrapper}
+        blurType="light"
+        blurAmount={2.5}
+        reducedTransparencyFallbackColor="white"
       >
         <View style={styles.popupContainer}>
           <View style={styles.popupHeaderContainer}>
-            {fontsLoaded && (
-              <Text style={styles.popupTitleText}>Forget Password</Text>
-            )}
+            <Text style={styles.popupTitleText}>Forget Password</Text>
           </View>
           <View style={styles.popupBodyContainer}>
-            {fontsLoaded && (
-              <Text style={styles.popupBodyText} numberOfLines={3}>
-                An email has been sent to you Follow direction in the email to
-                reset password
-              </Text>
-            )}
+            <Text style={styles.popupBodyText} numberOfLines={3}>
+              An email has been sent to you Follow direction in the email to
+              reset password
+            </Text>
+
             <TouchableOpacity
               style={styles.okButton}
               onPress={() => {
                 setShowPopup(false)
-                router.navigate("/forget-password/verification-code")
+                // navigation.navigate("verification-code")
               }}
             >
-              {fontsLoaded && <Text style={styles.okButtonText}>OK</Text>}
+              <Text style={styles.okButtonText}>OK</Text>
             </TouchableOpacity>
           </View>
         </View>

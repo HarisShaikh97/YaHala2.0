@@ -5,10 +5,11 @@ import React, {
   TouchableOpacity,
   StyleSheet
 } from "react-native"
-import { useRoute } from "@react-navigation/native"
+import { useRoute, useNavigation } from "@react-navigation/native"
 
 export default function FooterNav() {
   const route = useRoute()
+  const navigation = useNavigation()
 
   return (
     <View style={styles.footerWrapper}>
@@ -46,19 +47,19 @@ export default function FooterNav() {
         <TouchableOpacity
           style={[
             styles.navButton,
-            route?.name === "Login"
+            route?.name === "login"
               ? styles.navButtonSelected
               : styles.navButtonUnSelected
           ]}
           onPress={() => {
-            // if (pathname !== "/") {
-            // 	router.navigate("/")
-            // }
+            if (route?.name !== "login") {
+              navigation.navigate("login")
+            }
           }}
         >
           <Image
             source={
-              route?.name === "Login"
+              route?.name === "login"
                 ? require("../../assets/icons/sign-in-white.png")
                 : require("../../assets/icons/sign-in.png")
             }
