@@ -1,9 +1,12 @@
 import React from "react"
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native"
+import { useNavigation } from "@react-navigation/native"
 import OtpInputField from "../../components/otp-input/OtpInput"
 import FooterNav from "../../components/footer-nav/FooterNav"
 
 export default function VerificationCode() {
+  const navigation = useNavigation()
+
   return (
     <View style={styles.wrapper}>
       <View style={styles.container}>
@@ -32,7 +35,7 @@ export default function VerificationCode() {
           <TouchableOpacity
             style={styles.sendButton}
             onPress={() => {
-              // router.navigate("/forget-password/create-password")
+              navigation.navigate("create-password")
             }}
           >
             <Text style={styles.sendButtonText}>Send</Text>
