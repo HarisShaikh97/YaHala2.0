@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import Login from "./screens/login/Login"
 import ResetPassword from "./screens/reset-password/ResetPassword"
+import VerificationCode from "./screens/verification-code/VerificationCode"
 
 const Stack = createNativeStackNavigator()
 
@@ -17,6 +18,7 @@ export default function App() {
         >
           <Stack.Screen name="login" component={Login} />
           <Stack.Screen name="reset-password" component={ResetPassword} />
+          <Stack.Screen name="verification-code" component={VerificationCode} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

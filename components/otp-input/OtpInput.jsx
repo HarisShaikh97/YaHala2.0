@@ -1,25 +1,19 @@
+import React from "react"
 import { View, StyleSheet } from "react-native"
-import { useFonts } from "expo-font"
 import { OtpInput } from "react-native-otp-entry"
 
 export default function OtpInputField() {
-  const [fontsLoaded] = useFonts({
-    "Genos-Regular": require("../../assets/fonts/Genos/fonts/ttf/Genos-Regular.ttf")
-  })
-
   return (
     <View style={styles.otpInputWrapper}>
-      {fontsLoaded && (
-        <OtpInput
-          numberOfDigits={4}
-          theme={{
-            pinCodeContainerStyle: styles.pinCodeContainer,
-            pinCodeTextStyle: styles.pinCodeText,
-            focusedPinCodeContainerStyle: styles.activePinCodeContainer,
-            focusStickStyle: styles.focusStick
-          }}
-        />
-      )}
+      <OtpInput
+        numberOfDigits={4}
+        theme={{
+          pinCodeContainerStyle: styles.pinCodeContainer,
+          pinCodeTextStyle: styles.pinCodeText,
+          focusedPinCodeContainerStyle: styles.activePinCodeContainer,
+          focusStickStyle: styles.focusStick
+        }}
+      />
     </View>
   )
 }

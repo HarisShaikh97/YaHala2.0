@@ -31,12 +31,11 @@ export default function ForgetPasswordPopup({ showPopup, setShowPopup }) {
               An email has been sent to you Follow direction in the email to
               reset password
             </Text>
-
             <TouchableOpacity
               style={styles.okButton}
               onPress={() => {
                 setShowPopup(false)
-                // navigation.navigate("verification-code")
+                navigation.navigate("verification-code")
               }}
             >
               <Text style={styles.okButtonText}>OK</Text>
