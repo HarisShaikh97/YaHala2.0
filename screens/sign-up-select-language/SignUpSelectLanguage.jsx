@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import { View, Text, StyleSheet } from "react-native"
-// import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 import LanguageSearchBar from "../../components/language-search-bar/LanguageSearchBar"
 import LanguageOption from "../../components/language-option/LanguageOption"
 import FormButton from "../../components/form-button/FormButton"
 import FooterNav from "../../components/footer-nav/FooterNav"
 
 export default function SignUpSelectLanguage() {
-  //   const navigation = useNavigation()
+  const navigation = useNavigation()
 
   const languages = [
     {
@@ -61,7 +61,7 @@ export default function SignUpSelectLanguage() {
         <FormButton
           title="Save Changes"
           onPress={() => {
-            // navigation.navigate("login")
+            navigation.navigate("sign-up-select-gender")
           }}
         />
       </View>

@@ -1,18 +1,12 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native"
-import { Image } from "expo-image"
-import { useFonts } from "expo-font"
+import React from "react"
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native"
 import PropTypes from "prop-types"
-import Feather from "@expo/vector-icons/Feather"
 
 export default function GenderOption({
   selectedGender,
   setSelectedGender,
   item
 }) {
-  const [fontsLoaded] = useFonts({
-    "Genos-Regular": require("../../assets/fonts/Genos/fonts/ttf/Genos-Regular.ttf")
-  })
-
   return (
     <View style={styles.genderOptionWrapper}>
       <TouchableOpacity
@@ -36,22 +30,20 @@ export default function GenderOption({
           <Image
             source={item?.image}
             style={styles.genderButtonImage}
-            contentFit="contain"
+            resizeMode="contain"
           />
         </View>
       </TouchableOpacity>
-      {fontsLoaded && (
-        <Text
-          style={[
-            styles.genderTitleText,
-            selectedGender?.id === item?.id
-              ? styles.selectedGenderTitleText
-              : styles.unSelectedGenderTitleText
-          ]}
-        >
-          {item?.title}
-        </Text>
-      )}
+      <Text
+        style={[
+          styles.genderTitleText,
+          selectedGender?.id === item?.id
+            ? styles.selectedGenderTitleText
+            : styles.unSelectedGenderTitleText
+        ]}
+      >
+        {item?.title}
+      </Text>
       <View
         style={[
           styles.checkBox,
@@ -60,7 +52,11 @@ export default function GenderOption({
             : styles.checkBoxUnChecked
         ]}
       >
-        <Feather name="check" size={15} color="white" />
+        <Image
+          source={require("../../assets/icons/check-white.png")}
+          style={styles.checkIcon}
+          resizeMode="contain"
+        />
       </View>
     </View>
   )
@@ -118,6 +114,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: "center",
     justifyContent: "center"
+  },
+  checkIcon: {
+    height: 15,
+    width: 15
   },
   checkBoxChecked: {
     backgroundColor: "#2796C4"

@@ -74,7 +74,7 @@ export default function Login() {
 
           <TouchableOpacity
             onPress={() => {
-              // router.navigate("/sign-up/select-language")
+              navigation.navigate("sign-up-select-language")
             }}
           >
             <Text style={styles.signupText}>Sign Up</Text>

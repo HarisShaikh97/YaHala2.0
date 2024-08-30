@@ -1,15 +1,11 @@
+import React from "react"
 import { TouchableOpacity, Text, StyleSheet } from "react-native"
-import { useFonts } from "expo-font"
 import PropTypes from "prop-types"
 
 export default function SignUpNextButton({ onPress }) {
-  const [fontsLoaded] = useFonts({
-    "Genos-Regular": require("../../assets/fonts/Genos/fonts/ttf/Genos-Regular.ttf")
-  })
-
   return (
     <TouchableOpacity style={styles.actionButtonContainer} onPress={onPress}>
-      {fontsLoaded && <Text style={styles.actionButtonText}>Next</Text>}
+      <Text style={styles.actionButtonText}>Next</Text>
     </TouchableOpacity>
   )
 }

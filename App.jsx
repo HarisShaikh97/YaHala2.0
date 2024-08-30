@@ -8,6 +8,7 @@ import VerificationCode from "./screens/verification-code/VerificationCode"
 import CreatePassword from "./screens/create-password/CreatePassword"
 import SelectLanguage from "./screens/select-language/SelectLanguage"
 import SignUpSelectLanguage from "./screens/sign-up-select-language/SignUpSelectLanguage"
+import SelectGender from "./screens/select-gender/SelectGender"
 
 const Stack = createNativeStackNavigator()
 
@@ -28,6 +29,7 @@ export default function App() {
             name="sign-up-select-language"
             component={SignUpSelectLanguage}
           />
+          <Stack.Screen name="sign-up-select-gender" component={SelectGender} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
