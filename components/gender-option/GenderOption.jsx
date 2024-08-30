@@ -116,8 +116,8 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   checkIcon: {
-    height: 15,
-    width: 15
+    height: 12.5,
+    width: 12.5
   },
   checkBoxChecked: {
     backgroundColor: "#2796C4"

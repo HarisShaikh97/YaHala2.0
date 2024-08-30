@@ -1,10 +1,13 @@
 import React, { useState } from "react"
 import {
   View,
+  KeyboardAvoidingView,
+  ScrollView,
   Image,
   Text,
   TextInput,
   TouchableOpacity,
+  Platform,
   StyleSheet
 } from "react-native"
 import { useNavigation } from "@react-navigation/native"
@@ -20,100 +23,107 @@ export default function CreatePassword() {
 
   return (
     <View style={styles.wrapper}>
-      <View style={styles.container}>
-        <ScreenHeader title="Create Password" />
-        <View style={styles.bodyContainer}>
-          <Text style={styles.descriptionText}>
-            Choose a secure password that will be easy for you to remember.
-          </Text>
-          <View style={styles.inputFieldWrapper}>
-            <Text style={styles.inputFieldTitleText}>Password</Text>
-            <View style={styles.inputFieldContainer}>
-              <TextInput
-                style={styles.inputField}
-                secureTextEntry={!showPassword}
-              />
-              <TouchableOpacity
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.layout}
+      >
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.container}>
+            <ScreenHeader title="Create Password" />
+            <View style={styles.bodyContainer}>
+              <Text style={styles.descriptionText}>
+                Choose a secure password that will be easy for you to remember.
+              </Text>
+              <View style={styles.inputFieldWrapper}>
+                <Text style={styles.inputFieldTitleText}>Password</Text>
+                <View style={styles.inputFieldContainer}>
+                  <TextInput
+                    style={styles.inputField}
+                    secureTextEntry={!showPassword}
+                  />
+                  <TouchableOpacity
+                    onPress={() => {
+                      setShowPassword(!showPassword)
+                    }}
+                  >
+                    <Image
+                      source={
+                        showPassword
+                          ? require("../../assets/icons/eye-closed.png")
+                          : require("../../assets/icons/eye.png")
+                      }
+                      style={styles.showPasswordIcon}
+                      resizeMode="contain"
+                    />
+                  </TouchableOpacity>
+                </View>
+              </View>
+              <View style={styles.inputFieldWrapper}>
+                <Text style={styles.inputFieldTitleText}>Confirm Password</Text>
+                <View style={styles.inputFieldContainer}>
+                  <TextInput
+                    style={styles.inputField}
+                    secureTextEntry={!showConfirmPassword}
+                  />
+                  <TouchableOpacity
+                    onPress={() => {
+                      setShowConfirmPassword(!showConfirmPassword)
+                    }}
+                  >
+                    <Image
+                      source={
+                        showConfirmPassword
+                          ? require("../../assets/icons/eye-closed.png")
+                          : require("../../assets/icons/eye.png")
+                      }
+                      style={styles.showPasswordIcon}
+                      contentFit="contain"
+                    />
+                  </TouchableOpacity>
+                </View>
+              </View>
+              <View style={styles.listContainer}>
+                <View style={styles.listItemContainer}>
+                  <Image
+                    source={require("../../assets/icons/check.png")}
+                    style={styles.listItemCheckIcon}
+                    resizeMode="contain"
+                  />
+                  <Text style={[styles.listItemText, styles.listItemTextGray]}>
+                    Has at least 8 characters
+                  </Text>
+                </View>
+                <View style={styles.listItemContainer}>
+                  <Image
+                    source={require("../../assets/icons/check.png")}
+                    style={styles.listItemCheckIcon}
+                    resizeMode="contain"
+                  />
+                  <Text style={[styles.listItemText, styles.listItemTextGray]}>
+                    Has an uppercase letter or symbol
+                  </Text>
+                </View>
+                <View style={styles.listItemContainer}>
+                  <Image
+                    source={require("../../assets/icons/check-green.png")}
+                    style={styles.listItemCheckIcon}
+                    resizeMode="contain"
+                  />
+                  <Text style={[styles.listItemText, styles.listItemTextGreen]}>
+                    Has a number
+                  </Text>
+                </View>
+              </View>
+              <FormButton
+                title="Continue"
                 onPress={() => {
-                  setShowPassword(!showPassword)
+                  navigation.navigate("login")
                 }}
-              >
-                <Image
-                  source={
-                    showPassword
-                      ? require("../../assets/icons/eye-closed.png")
-                      : require("../../assets/icons/eye.png")
-                  }
-                  style={styles.showPasswordIcon}
-                  resizeMode="contain"
-                />
-              </TouchableOpacity>
+              />
             </View>
           </View>
-          <View style={styles.inputFieldWrapper}>
-            <Text style={styles.inputFieldTitleText}>Confirm Password</Text>
-            <View style={styles.inputFieldContainer}>
-              <TextInput
-                style={styles.inputField}
-                secureTextEntry={!showConfirmPassword}
-              />
-              <TouchableOpacity
-                onPress={() => {
-                  setShowConfirmPassword(!showConfirmPassword)
-                }}
-              >
-                <Image
-                  source={
-                    showConfirmPassword
-                      ? require("../../assets/icons/eye-closed.png")
-                      : require("../../assets/icons/eye.png")
-                  }
-                  style={styles.showPasswordIcon}
-                  contentFit="contain"
-                />
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.listContainer}>
-            <View style={styles.listItemContainer}>
-              <Image
-                source={require("../../assets/icons/check.png")}
-                style={styles.listItemCheckIcon}
-                resizeMode="contain"
-              />
-              <Text style={[styles.listItemText, styles.listItemTextGray]}>
-                Has at least 8 characters
-              </Text>
-            </View>
-            <View style={styles.listItemContainer}>
-              <Image
-                source={require("../../assets/icons/check.png")}
-                style={styles.listItemCheckIcon}
-                resizeMode="contain"
-              />
-              <Text style={[styles.listItemText, styles.listItemTextGray]}>
-                Has an uppercase letter or symbol
-              </Text>
-            </View>
-            <View style={styles.listItemContainer}>
-              <Image
-                source={require("../../assets/icons/check-green.png")}
-                style={styles.listItemCheckIcon}
-                resizeMode="contain"
-              />
-              <Text style={[styles.listItemText, styles.listItemTextGreen]}>
-                Has a number
-              </Text>
-            </View>
-          </View>
-          <FormButton
-            title="Continue"
-            onPress={() => {
-              navigation.navigate("login")
-            }}
-          />
-        </View>
-      </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
       <FooterNav />
     </View>
   )
@@ -121,6 +131,9 @@ export default function CreatePassword() {
 
 const styles = StyleSheet.create({
   wrapper: {
+    flex: 1
+  },
+  layout: {
     flex: 1
   },
   container: {

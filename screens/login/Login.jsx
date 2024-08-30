@@ -1,10 +1,13 @@
 import React, { useState } from "react"
 import {
   View,
+  KeyboardAvoidingView,
+  ScrollView,
   Text,
   TextInput,
   Image,
   TouchableOpacity,
+  Platform,
   StyleSheet
 } from "react-native"
 import { useNavigation } from "@react-navigation/native"
@@ -19,68 +22,75 @@ export default function Login() {
 
   return (
     <View style={styles.wrapper}>
-      <View style={styles.container}>
-        <Image
-          source={require("../../assets/images/sign-in.png")}
-          style={styles.bgImage}
-          alt="image"
-          resizeMode="contain"
-        />
-        <View style={styles.inputFieldWrapper}>
-          <Text style={styles.inputFieldTitleText}>E-Mail</Text>
-
-          <TextInput
-            style={[
-              styles.inputField,
-              isEmailFocused
-                ? styles.inputFieldFocused
-                : styles.inputFieldUnFocused
-            ]}
-            inputMode="email"
-            placeholder="example@gmail.com"
-            placeholderTextColor={"gray"}
-            onFocus={() => setIsEmailFocused(true)}
-            onBlur={() => setIsEmailFocused(false)}
-          />
-        </View>
-        <View style={styles.inputFieldWrapper}>
-          <Text style={styles.inputFieldTitleText}>Password</Text>
-          <TextInput
-            style={[
-              styles.inputField,
-              isPasswordFocused
-                ? styles.inputFieldFocused
-                : styles.inputFieldUnFocused
-            ]}
-            inputMode="text"
-            placeholder="Password"
-            placeholderTextColor={"gray"}
-            secureTextEntry
-            onFocus={() => setIsPasswordFocused(true)}
-            onBlur={() => setIsPasswordFocused(false)}
-          />
-        </View>
-        <TouchableOpacity
-          style={styles.forgotPasswordButton}
-          onPress={() => {
-            navigation.navigate("reset-password")
-          }}
-        >
-          <Text style={styles.forgotPasswordButtonText}>Forgot password?</Text>
-        </TouchableOpacity>
-        <FormButton title="Login" onPress={() => {}} />
-        <View style={styles.signupTextSection}>
-          <Text style={styles.accountText}>Don{"'"}t have an account?</Text>
-
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate("sign-up-select-language")
-            }}
-          >
-            <Text style={styles.signupText}>Sign Up</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.layout}
+      >
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.container}>
+            <Image
+              source={require("../../assets/images/sign-in.png")}
+              style={styles.bgImage}
+              alt="image"
+              resizeMode="contain"
+            />
+            <View style={styles.inputFieldWrapper}>
+              <Text style={styles.inputFieldTitleText}>E-Mail</Text>
+              <TextInput
+                style={[
+                  styles.inputField,
+                  isEmailFocused
+                    ? styles.inputFieldFocused
+                    : styles.inputFieldUnFocused
+                ]}
+                inputMode="email"
+                placeholder="example@gmail.com"
+                placeholderTextColor={"gray"}
+                onFocus={() => setIsEmailFocused(true)}
+                onBlur={() => setIsEmailFocused(false)}
+              />
+            </View>
+            <View style={styles.inputFieldWrapper}>
+              <Text style={styles.inputFieldTitleText}>Password</Text>
+              <TextInput
+                style={[
+                  styles.inputField,
+                  isPasswordFocused
+                    ? styles.inputFieldFocused
+                    : styles.inputFieldUnFocused
+                ]}
+                inputMode="text"
+                placeholder="Password"
+                placeholderTextColor={"gray"}
+                secureTextEntry
+                onFocus={() => setIsPasswordFocused(true)}
+                onBlur={() => setIsPasswordFocused(false)}
+              />
+            </View>
+            <TouchableOpacity
+              style={styles.forgotPasswordButton}
+              onPress={() => {
+                navigation.navigate("reset-password")
+              }}
+            >
+              <Text style={styles.forgotPasswordButtonText}>
+                Forgot password?
+              </Text>
+            </TouchableOpacity>
+            <FormButton title="Login" onPress={() => {}} />
+            <View style={styles.signupTextSection}>
+              <Text style={styles.accountText}>Don{"'"}t have an account?</Text>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("sign-up-select-language")
+                }}
+              >
+                <Text style={styles.signupText}>Sign Up</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
       <FooterNav />
     </View>
   )
@@ -88,6 +98,9 @@ export default function Login() {
 
 const styles = StyleSheet.create({
   wrapper: {
+    flex: 1
+  },
+  layout: {
     flex: 1
   },
   container: {

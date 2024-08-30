@@ -1,5 +1,13 @@
 import React, { useState } from "react"
-import { View, Text, TextInput, StyleSheet } from "react-native"
+import {
+  View,
+  KeyboardAvoidingView,
+  ScrollView,
+  Text,
+  TextInput,
+  Platform,
+  StyleSheet
+} from "react-native"
 import ScreenHeader from "../../components/screen-header/ScreenHeader"
 import FormButton from "../../components/form-button/FormButton"
 import FooterNav from "../../components/footer-nav/FooterNav"
@@ -12,37 +20,44 @@ export default function ResetPassword() {
   return (
     <View style={styles.wrapper}>
       <ForgetPasswordPopup showPopup={showPopup} setShowPopup={setShowPopup} />
-      <View style={styles.container}>
-        <ScreenHeader title="Forget Password" />
-        <View style={styles.bodyContainer}>
-          <Text style={styles.titleText}>Reset Password</Text>
-          <Text style={styles.descriptionText}>
-            Please enter your email address to request a password reset
-          </Text>
-          <TextInput
-            style={[
-              styles.inputField,
-              isEmailFocused
-                ? styles.inputFieldFocused
-                : styles.inputFieldUnFocused
-            ]}
-            inputMode="email"
-            placeholder="example@gmail.com"
-            placeholderTextColor={"gray"}
-            onFocus={() => setIsEmailFocused(true)}
-            onBlur={() => setIsEmailFocused(false)}
-          />
-          <Text style={styles.messageText}>
-            Email sent to ex*****@gmail.com
-          </Text>
-          <FormButton
-            title="Send"
-            onPress={() => {
-              setShowPopup(true)
-            }}
-          />
-        </View>
-      </View>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.layout}
+      >
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.container}>
+            <ScreenHeader title="Forget Password" />
+            <View style={styles.bodyContainer}>
+              <Text style={styles.titleText}>Reset Password</Text>
+              <Text style={styles.descriptionText}>
+                Please enter your email address to request a password reset
+              </Text>
+              <TextInput
+                style={[
+                  styles.inputField,
+                  isEmailFocused
+                    ? styles.inputFieldFocused
+                    : styles.inputFieldUnFocused
+                ]}
+                inputMode="email"
+                placeholder="example@gmail.com"
+                placeholderTextColor={"gray"}
+                onFocus={() => setIsEmailFocused(true)}
+                onBlur={() => setIsEmailFocused(false)}
+              />
+              <Text style={styles.messageText}>
+                Email sent to ex*****@gmail.com
+              </Text>
+              <FormButton
+                title="Send"
+                onPress={() => {
+                  setShowPopup(true)
+                }}
+              />
+            </View>
+          </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
       <FooterNav />
     </View>
   )
@@ -50,6 +65,9 @@ export default function ResetPassword() {
 
 const styles = StyleSheet.create({
   wrapper: {
+    flex: 1
+  },
+  layout: {
     flex: 1
   },
   container: {

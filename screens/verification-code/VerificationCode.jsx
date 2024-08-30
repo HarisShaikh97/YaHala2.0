@@ -1,5 +1,14 @@
 import React from "react"
-import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native"
+import {
+  View,
+  KeyboardAvoidingView,
+  ScrollView,
+  Text,
+  Image,
+  TouchableOpacity,
+  Platform,
+  StyleSheet
+} from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import OtpInputField from "../../components/otp-input/OtpInput"
 import FooterNav from "../../components/footer-nav/FooterNav"
@@ -9,39 +18,47 @@ export default function VerificationCode() {
 
   return (
     <View style={styles.wrapper}>
-      <View style={styles.container}>
-        <Text style={styles.headerTitleText}>Forget Password</Text>
-        <View style={styles.bodyContainer}>
-          <Image
-            source={require("../../assets/images/verification-code.png")}
-            style={styles.bgImage}
-            resizeMode="contain"
-          />
-          <Text style={styles.titleText}>Verification Code</Text>
-          <Text style={styles.descriptionText}>
-            Please type the verification code sent to prelookstudio@gmail.com
-          </Text>
-          <OtpInputField />
-          <View style={styles.resendTextWrapper}>
-            <Text style={[styles.resendText, styles.resendTextDark]}>
-              I didn{"'"}t receive a code!
-            </Text>
-            <TouchableOpacity>
-              <Text style={[styles.resendText, styles.resendTextOrange]}>
-                Please resend
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.layout}
+      >
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.container}>
+            <Text style={styles.headerTitleText}>Forget Password</Text>
+            <View style={styles.bodyContainer}>
+              <Image
+                source={require("../../assets/images/verification-code.png")}
+                style={styles.bgImage}
+                resizeMode="contain"
+              />
+              <Text style={styles.titleText}>Verification Code</Text>
+              <Text style={styles.descriptionText}>
+                Please type the verification code sent to
+                prelookstudio@gmail.com
               </Text>
-            </TouchableOpacity>
+              <OtpInputField />
+              <View style={styles.resendTextWrapper}>
+                <Text style={[styles.resendText, styles.resendTextDark]}>
+                  I didn{"'"}t receive a code!
+                </Text>
+                <TouchableOpacity>
+                  <Text style={[styles.resendText, styles.resendTextOrange]}>
+                    Please resend
+                  </Text>
+                </TouchableOpacity>
+              </View>
+              <TouchableOpacity
+                style={styles.sendButton}
+                onPress={() => {
+                  navigation.navigate("create-password")
+                }}
+              >
+                <Text style={styles.sendButtonText}>Send</Text>
+              </TouchableOpacity>
+            </View>
           </View>
-          <TouchableOpacity
-            style={styles.sendButton}
-            onPress={() => {
-              navigation.navigate("create-password")
-            }}
-          >
-            <Text style={styles.sendButtonText}>Send</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
       <FooterNav />
     </View>
   )
@@ -49,6 +66,9 @@ export default function VerificationCode() {
 
 const styles = StyleSheet.create({
   wrapper: {
+    flex: 1
+  },
+  layout: {
     flex: 1
   },
   container: {
