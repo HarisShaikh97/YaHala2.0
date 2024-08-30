@@ -13,33 +13,48 @@ import SelectGender from "./screens/select-gender/SelectGender"
 const Stack = createNativeStackNavigator()
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName="login"
-          screenOptions={{ headerShown: false }}
-        >
-          <Stack.Screen name="login" component={Login} />
-          <Stack.Screen name="reset-password" component={ResetPassword} />
-          <Stack.Screen name="verification-code" component={VerificationCode} />
-          <Stack.Screen name="create-password" component={CreatePassword} />
-          <Stack.Screen name="select-language" component={SelectLanguage} />
-          <Stack.Screen
-            name="sign-up-select-language"
-            component={SignUpSelectLanguage}
-          />
-          <Stack.Screen name="sign-up-select-gender" component={SelectGender} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </View>
-  )
+    return (
+        <View style={styles.container}>
+            <NavigationContainer>
+                <Stack.Navigator
+                    initialRouteName="login"
+                    screenOptions={{ headerShown: false }}
+                >
+                    <Stack.Screen name="login" component={Login} />
+                    <Stack.Screen
+                        name="reset-password"
+                        component={ResetPassword}
+                    />
+                    <Stack.Screen
+                        name="verification-code"
+                        component={VerificationCode}
+                    />
+                    <Stack.Screen
+                        name="create-password"
+                        component={CreatePassword}
+                    />
+                    <Stack.Screen
+                        name="select-language"
+                        component={SelectLanguage}
+                    />
+                    <Stack.Screen
+                        name="sign-up-select-language"
+                        component={SignUpSelectLanguage}
+                    />
+                    <Stack.Screen
+                        name="sign-up-select-gender"
+                        component={SelectGender}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar?.currentHeight : 35,
-    backgroundColor: "#F2F2F2"
-  }
+    container: {
+        flex: 1,
+        paddingTop: Platform.OS === "android" ? StatusBar?.currentHeight : 35,
+        backgroundColor: "#F2F2F2"
+    }
 })
