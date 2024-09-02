@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         alignItems: "center",
         paddingHorizontal: 20,
-        paddingTop: 25
+        paddingTop: 50
     },
     headerTitleText: {
         fontSize: 22.5,

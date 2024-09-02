@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
         flexDirection: "column"
     },
     bgImage: {
-        height: 500,
+        height: 550,
         width: "100%",
         overflow: "hidden",
         justifyContent: "flex-end"

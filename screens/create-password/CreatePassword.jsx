@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         paddingHorizontal: 20,
-        paddingTop: 25
+        paddingTop: 50
     },
     bodyContainer: {
         width: "100%",

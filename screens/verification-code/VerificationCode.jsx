@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         alignItems: "center",
-        paddingTop: 25
+        paddingTop: 50
     },
     headerTitleText: {
         fontSize: 22.5,

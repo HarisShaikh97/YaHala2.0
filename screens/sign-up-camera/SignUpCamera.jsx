@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
         flexDirection: "column",
-        paddingTop: 35,
+        paddingTop: 50,
         zIndex: 10
     },
     backButtonContainer: {
