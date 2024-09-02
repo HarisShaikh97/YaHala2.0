@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
     View,
     ScrollView,
@@ -11,6 +11,7 @@ import {
 } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import LinearGradient from "react-native-linear-gradient"
+import YourInformationModal from "../../components/your-information-modal/YourInformationModal"
 import SignUpBackButton from "../../components/sign-up-back-button/SignUpBackButton"
 import SignUpNextButton from "../../components/sign-up-next-button/SignUpNextButton"
 import FooterNav from "../../components/footer-nav/FooterNav"
@@ -18,8 +19,14 @@ import FooterNav from "../../components/footer-nav/FooterNav"
 export default function SignUpUserDetails() {
     const navigation = useNavigation()
 
+    const [openModal, setOpenModal] = useState(false)
+
     return (
         <View style={styles.wrapper}>
+            <YourInformationModal
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+            />
             <KeyboardAvoidingView
                 behavior={Platform.OS === "ios" ? "padding" : "height"}
                 style={styles.layout}
@@ -78,7 +85,7 @@ export default function SignUpUserDetails() {
                                 />
                                 <SignUpNextButton
                                     onPress={() => {
-                                        // navigation.navigate("sign-up-user-details")
+                                        setOpenModal(true)
                                     }}
                                 />
                             </View>
