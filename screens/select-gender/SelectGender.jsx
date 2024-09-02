@@ -1,11 +1,14 @@
 import React, { useState } from "react"
 import { View, StyleSheet } from "react-native"
+import { useNavigation } from "@react-navigation/native"
 import ScreenHeader from "../../components/screen-header/ScreenHeader"
 import GenderOption from "../../components/gender-option/GenderOption"
 import SignUpNextButton from "../../components/sign-up-next-button/SignUpNextButton"
 import FooterNav from "../../components/footer-nav/FooterNav"
 
 export default function SelectGender() {
+    const navigation = useNavigation()
+
     const genders = [
         {
             id: 1,
@@ -38,7 +41,11 @@ export default function SelectGender() {
                     })}
                 </View>
                 <View style={styles.actionButtonsWrapper}>
-                    <SignUpNextButton onPress={() => {}} />
+                    <SignUpNextButton
+                        onPress={() => {
+                            navigation.navigate("sign-up-camera")
+                        }}
+                    />
                 </View>
             </View>
             <FooterNav />
