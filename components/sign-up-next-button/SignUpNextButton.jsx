@@ -16,7 +16,7 @@ export default function SignUpNextButton({ onPress }) {
 const styles = StyleSheet.create({
     actionButtonContainer: {
         height: 42.5,
-        width: "45%",
+        width: "42.5%",
         borderRadius: 7.5,
         alignItems: "center",
         justifyContent: "center",

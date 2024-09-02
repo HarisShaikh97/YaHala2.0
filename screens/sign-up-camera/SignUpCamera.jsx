@@ -147,7 +147,7 @@ export default function SignUpCamera() {
                             />
                             <SignUpNextButton
                                 onPress={() => {
-                                    // navigation.navigate("sign-up-camera")
+                                    navigation.navigate("sign-up-user-details")
                                 }}
                             />
                         </View>
