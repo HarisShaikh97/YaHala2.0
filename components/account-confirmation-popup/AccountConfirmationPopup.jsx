@@ -37,7 +37,7 @@ export default function AccountConfirmationPopup({ showPopup, setShowPopup }) {
                             style={styles.okButton}
                             onPress={() => {
                                 setShowPopup(false)
-                                // navigation.navigate("verification-code")
+                                navigation.navigate("sign-up-verification-code")
                             }}
                         >
                             <Text style={styles.okButtonText}>OK</Text>
