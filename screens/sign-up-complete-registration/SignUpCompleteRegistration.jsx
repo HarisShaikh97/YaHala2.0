@@ -11,6 +11,7 @@ import {
     StyleSheet
 } from "react-native"
 import { useNavigation } from "@react-navigation/native"
+import AccountConfirmationPopup from "../../components/account-confirmation-popup/AccountConfirmationPopup"
 import ScreenHeader from "../../components/screen-header/ScreenHeader"
 import SignUpBackButton from "../../components/sign-up-back-button/SignUpBackButton"
 import SignUpNextButton from "../../components/sign-up-next-button/SignUpNextButton"
@@ -21,9 +22,14 @@ export default function SignUpCompleteRegistration() {
 
     const [showPassword, setShowPassword] = useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+    const [showPopup, setShowPopup] = useState(false)
 
     return (
         <View style={styles.wrapper}>
+            <AccountConfirmationPopup
+                showPopup={showPopup}
+                setShowPopup={setShowPopup}
+            />
             <KeyboardAvoidingView
                 behavior={Platform.OS === "ios" ? "padding" : "height"}
                 style={styles.layout}
@@ -321,7 +327,7 @@ export default function SignUpCompleteRegistration() {
                             />
                             <SignUpNextButton
                                 onPress={() => {
-                                    // navigation.navigate("sign-up-user-details")
+                                    setShowPopup(true)
                                 }}
                             />
                         </View>
