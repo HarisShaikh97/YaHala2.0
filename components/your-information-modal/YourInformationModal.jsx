@@ -7,12 +7,15 @@ import {
     TouchableOpacity,
     StyleSheet
 } from "react-native"
+import { useNavigation } from "@react-navigation/native"
 import PropTypes from "prop-types"
 import ScreenHeader from "../screen-header/ScreenHeader"
 import SignUpBackButton from "../sign-up-back-button/SignUpBackButton"
 import SignUpNextButton from "../sign-up-next-button/SignUpNextButton"
 
 export default function YourInformationModal({ openModal, setOpenModal }) {
+    const navigation = useNavigation()
+
     const statuses = [
         {
             id: 1,
@@ -165,6 +168,7 @@ export default function YourInformationModal({ openModal, setOpenModal }) {
                         <SignUpNextButton
                             onPress={() => {
                                 setOpenModal(false)
+                                navigation.navigate("sign-up-select-location")
                             }}
                         />
                     </View>

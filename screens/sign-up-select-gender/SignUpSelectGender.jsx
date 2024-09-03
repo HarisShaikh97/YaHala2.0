@@ -6,7 +6,7 @@ import GenderOption from "../../components/gender-option/GenderOption"
 import SignUpNextButton from "../../components/sign-up-next-button/SignUpNextButton"
 import FooterNav from "../../components/footer-nav/FooterNav"
 
-export default function SelectGender() {
+export default function SignUpSelectGender() {
     const navigation = useNavigation()
 
     const genders = [

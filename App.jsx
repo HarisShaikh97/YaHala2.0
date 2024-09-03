@@ -7,9 +7,10 @@ import VerificationCode from "./screens/verification-code/VerificationCode"
 import CreatePassword from "./screens/create-password/CreatePassword"
 import SelectLanguage from "./screens/select-language/SelectLanguage"
 import SignUpSelectLanguage from "./screens/sign-up-select-language/SignUpSelectLanguage"
-import SelectGender from "./screens/select-gender/SelectGender"
+import SignUpSelectGender from "./screens/sign-up-select-gender/SignUpSelectGender"
 import SignUpCamera from "./screens/sign-up-camera/SignUpCamera"
 import SignUpUserDetails from "./screens/sign-up-user-details/SignUpUserDetails"
+import SignUpSelectLocation from "./screens/sign-up-select-location/SignUpSelectLocation"
 
 const Stack = createNativeStackNavigator()
 
@@ -40,12 +41,16 @@ export default function App() {
                 />
                 <Stack.Screen
                     name="sign-up-select-gender"
-                    component={SelectGender}
+                    component={SignUpSelectGender}
                 />
                 <Stack.Screen name="sign-up-camera" component={SignUpCamera} />
                 <Stack.Screen
                     name="sign-up-user-details"
                     component={SignUpUserDetails}
+                />
+                <Stack.Screen
+                    name="sign-up-select-location"
+                    component={SignUpSelectLocation}
                 />
             </Stack.Navigator>
         </NavigationContainer>
