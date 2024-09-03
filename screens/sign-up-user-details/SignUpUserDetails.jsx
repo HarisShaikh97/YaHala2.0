@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
         width: "100%",
         borderRadius: 6.5,
         backgroundColor: "white",
-        fontFamily: "Genos-Regular",
+        fontFamily: "Genos-Light",
         fontSize: 17.5,
         paddingHorizontal: 10
     },

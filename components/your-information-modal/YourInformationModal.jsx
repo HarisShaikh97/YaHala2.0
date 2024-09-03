@@ -222,11 +222,11 @@ const styles = StyleSheet.create({
         gap: 5
     },
     sectionTitleText: {
-        fontSize: 15,
-        fontFamily: "Genos-Regular",
+        fontSize: 16.5,
+        fontFamily: "Genos-Light",
         color: "#1C274C",
         opacity: 0.6,
-        lineHeight: 17.5
+        lineHeight: 19
     },
     horizontalSeparator: {
         height: 1,
@@ -293,7 +293,7 @@ const styles = StyleSheet.create({
     },
     informationBoxDescriptionText: {
         fontSize: 12.5,
-        fontFamily: "Genos-Regular",
+        fontFamily: "Genos-Light",
         color: "#1C274C"
     },
     emptyView: {

@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
     },
     listItemText: {
         fontSize: 17.5,
-        fontFamily: "Genos-Regular",
+        fontFamily: "Genos-Light",
         lineHeight: 20
     },
     listItemTextGray: {

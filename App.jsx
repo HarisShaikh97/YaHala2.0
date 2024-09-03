@@ -11,6 +11,7 @@ import SignUpSelectGender from "./screens/sign-up-select-gender/SignUpSelectGend
 import SignUpCamera from "./screens/sign-up-camera/SignUpCamera"
 import SignUpUserDetails from "./screens/sign-up-user-details/SignUpUserDetails"
 import SignUpSelectLocation from "./screens/sign-up-select-location/SignUpSelectLocation"
+import SignUpCompleteRegistration from "./screens/sign-up-complete-registration/SignUpCompleteRegistration"
 
 const Stack = createNativeStackNavigator()
 
@@ -51,6 +52,10 @@ export default function App() {
                 <Stack.Screen
                     name="sign-up-select-location"
                     component={SignUpSelectLocation}
+                />
+                <Stack.Screen
+                    name="sign-up-complete-registration"
+                    component={SignUpCompleteRegistration}
                 />
             </Stack.Navigator>
         </NavigationContainer>

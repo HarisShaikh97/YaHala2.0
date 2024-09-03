@@ -206,7 +206,7 @@ export default function SignUpSelectLocation() {
                     />
                     <SignUpNextButton
                         onPress={() => {
-                            // navigation.navigate("sign-up-user-details")
+                            navigation.navigate("sign-up-complete-registration")
                         }}
                     />
                 </View>
@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
     searchBarInput: {
         flex: 1,
         fontSize: 17.5,
-        fontFamily: "Genos-Regular",
+        fontFamily: "Genos-Light",
         lineHeight: 20
     },
     crossButton: {

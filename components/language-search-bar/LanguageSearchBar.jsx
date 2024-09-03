@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     inputField: {
         flex: 1,
         fontSize: 20,
-        fontFamily: "Genos-Regular",
+        fontFamily: "Genos-Light",
         lineHeight: 25
     }
 })
