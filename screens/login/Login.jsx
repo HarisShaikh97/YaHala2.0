@@ -106,7 +106,8 @@ export default function Login() {
 
 const styles = StyleSheet.create({
     wrapper: {
-        flex: 1
+        flex: 1,
+        flexDirection: "column"
     },
     layout: {
         flex: 1

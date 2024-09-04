@@ -55,7 +55,8 @@ export default function SignUpSelectGender() {
 
 const styles = StyleSheet.create({
     wrapper: {
-        flex: 1
+        flex: 1,
+        flexDirection: "column"
     },
     container: {
         flex: 1,
