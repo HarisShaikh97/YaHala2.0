@@ -9,10 +9,13 @@ import {
     Platform,
     StyleSheet
 } from "react-native"
+import { useNavigation } from "@react-navigation/native"
 import OtpInputField from "../../components/otp-input/OtpInput"
 import FooterNav from "../../components/footer-nav/FooterNav"
 
 export default function SignUpVerificationCode() {
+    const navigation = useNavigation()
+
     return (
         <View style={styles.wrapper}>
             <KeyboardAvoidingView
@@ -61,7 +64,9 @@ export default function SignUpVerificationCode() {
                             <TouchableOpacity
                                 style={styles.sendButton}
                                 onPress={() => {
-                                    // navigation.navigate("create-password")
+                                    navigation.navigate(
+                                        "sign-up-account-created"
+                                    )
                                 }}
                             >
                                 <Text style={styles.sendButtonText}>Send</Text>
@@ -136,7 +141,7 @@ const styles = StyleSheet.create({
         color: "#FE724C"
     },
     sendButton: {
-        height: 55,
+        height: 50,
         width: "85%",
         borderRadius: 10,
         backgroundColor: "#2796C4",

@@ -13,6 +13,7 @@ import SignUpUserDetails from "./screens/sign-up-user-details/SignUpUserDetails"
 import SignUpSelectLocation from "./screens/sign-up-select-location/SignUpSelectLocation"
 import SignUpCompleteRegistration from "./screens/sign-up-complete-registration/SignUpCompleteRegistration"
 import SignUpVerificationCode from "./screens/sign-up-verification-code/SignUpVerificationCode"
+import SignUpAccountCreated from "./screens/sign-up-account-created/SignUpAccountCreated"
 
 const Stack = createNativeStackNavigator()
 
@@ -61,6 +62,10 @@ export default function App() {
                 <Stack.Screen
                     name="sign-up-verification-code"
                     component={SignUpVerificationCode}
+                />
+                <Stack.Screen
+                    name="sign-up-account-created"
+                    component={SignUpAccountCreated}
                 />
             </Stack.Navigator>
         </NavigationContainer>
