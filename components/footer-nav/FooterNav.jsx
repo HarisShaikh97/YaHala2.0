@@ -46,7 +46,13 @@ export default function FooterNav() {
                         resizeMode="contain"
                     />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                        if (route.name !== "home") {
+                            navigation.navigate("home")
+                        }
+                    }}
+                >
                     <Image
                         source={require("../../assets/icons/YaHala-logo.png")}
                         style={styles.logoImage}
