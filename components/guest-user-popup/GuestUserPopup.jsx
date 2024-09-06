@@ -23,97 +23,93 @@ export default function GuestUserPopup({ showPopup, setShowPopup }) {
             onRequestClose={() => {
                 setShowPopup(false)
             }}
+            style={styles.popupWrapper}
         >
             <BlurView
-                style={styles.popupWrapper}
+                style={styles.blurView}
                 blurType="dark"
                 blurAmount={2.5}
                 reducedTransparencyFallbackColor="white"
+            />
+            <ImageBackground
+                source={require("../../assets/images/guest-user-popup-background.png")}
+                style={styles.bgImage}
+                resizeMode="contain"
             >
-                <ImageBackground
-                    source={require("../../assets/images/guest-user-popup-background.png")}
-                    style={styles.bgImage}
-                    resizeMode="contain"
+                <View style={styles.infoIconContainer}>
+                    <View style={styles.infoIconCircle} />
+                    <View style={styles.infoIconRectangle} />
+                </View>
+                <TouchableOpacity
+                    style={styles.crossIconContainer}
+                    onPress={() => {
+                        setShowPopup(false)
+                    }}
                 >
-                    <View style={styles.infoIconContainer}>
-                        <View style={styles.infoIconCircle} />
-                        <View style={styles.infoIconRectangle} />
-                    </View>
+                    <Image
+                        source={require("../../assets/icons/cross-red.png")}
+                        style={styles.crossIcon}
+                        resizeMode="contain"
+                    />
+                </TouchableOpacity>
+                <Text style={styles.popupTitleText}>Dear Guest</Text>
+                <Text style={styles.popupDescriptionText}>
+                    To get access to our content You have to Create account or
+                    Sign up
+                </Text>
+                <View style={styles.authenticationButtonsWrapper}>
                     <TouchableOpacity
-                        style={styles.crossIconContainer}
+                        style={styles.authenticationButtonContainer}
                         onPress={() => {
                             setShowPopup(false)
+                            navigation.navigate("sign-up-select-language")
                         }}
                     >
                         <Image
-                            source={require("../../assets/icons/cross-red.png")}
-                            style={styles.crossIcon}
+                            source={require("../../assets/icons/sign-up.png")}
+                            style={styles.authenticationIcon}
                             resizeMode="contain"
                         />
+                        <Text style={styles.authenticationButtonTitleText}>
+                            Create Account
+                        </Text>
+                        <Text
+                            style={styles.authenticationButtonDescriptionText}
+                        >
+                            Join to us, and enjoy our Platform
+                        </Text>
                     </TouchableOpacity>
-                    <Text style={styles.popupTitleText}>Dear Guest</Text>
-                    <Text style={styles.popupDescriptionText}>
-                        To get access to our content You have to Create account
-                        or Sign up
-                    </Text>
-                    <View style={styles.authenticationButtonsWrapper}>
-                        <TouchableOpacity
-                            style={styles.authenticationButtonContainer}
-                            onPress={() => {
-                                setShowPopup(false)
-                                navigation.navigate("sign-up-select-language")
-                            }}
-                        >
-                            <Image
-                                source={require("../../assets/icons/sign-up.png")}
-                                style={styles.authenticationIcon}
-                                resizeMode="contain"
-                            />
-                            <Text style={styles.authenticationButtonTitleText}>
-                                Create Account
-                            </Text>
-                            <Text
-                                style={
-                                    styles.authenticationButtonDescriptionText
-                                }
-                            >
-                                Join to us, and enjoy our Platform
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.authenticationButtonContainer}
-                            onPress={() => {
-                                setShowPopup(false)
-                                navigation.navigate("login")
-                            }}
-                        >
-                            <Image
-                                source={require("../../assets/icons/sign-in.png")}
-                                style={styles.authenticationIcon}
-                                resizeMode="contain"
-                            />
-                            <Text style={styles.authenticationButtonTitleText}>
-                                Sign in
-                            </Text>
-                            <Text
-                                style={
-                                    styles.authenticationButtonDescriptionText
-                                }
-                            >
-                                Please use your Login Details for Access
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
                     <TouchableOpacity
-                        style={styles.closeButton}
+                        style={styles.authenticationButtonContainer}
                         onPress={() => {
                             setShowPopup(false)
+                            navigation.navigate("login")
                         }}
                     >
-                        <Text style={styles.closeButtonText}>Close</Text>
+                        <Image
+                            source={require("../../assets/icons/sign-in.png")}
+                            style={styles.authenticationIcon}
+                            resizeMode="contain"
+                        />
+                        <Text style={styles.authenticationButtonTitleText}>
+                            Sign in
+                        </Text>
+                        <Text
+                            style={styles.authenticationButtonDescriptionText}
+                        >
+                            Please use your Login Details for Access
+                        </Text>
                     </TouchableOpacity>
-                </ImageBackground>
-            </BlurView>
+                </View>
+                <TouchableOpacity
+                    style={styles.closeButton}
+                    onPress={() => {
+                        setShowPopup(false)
+                    }}
+                >
+                    <Text style={styles.closeButtonText}>Close</Text>
+                </TouchableOpacity>
+            </ImageBackground>
         </Modal>
     )
 }
@@ -122,13 +118,18 @@ const styles = StyleSheet.create({
     popupWrapper: {
         flex: 1,
         width: "100%",
-        alignItems: "center",
-        justifyContent: "center"
+        position: "relative"
+    },
+    blurView: {
+        flex: 1
     },
     bgImage: {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: [{ translateX: -150 }, { translateY: -232.5 }],
         height: 465,
         width: 300,
-        position: "relative",
         flexDirection: "column",
         alignItems: "center"
     },

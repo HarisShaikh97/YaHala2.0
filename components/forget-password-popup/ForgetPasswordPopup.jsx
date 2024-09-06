@@ -15,36 +15,34 @@ export default function ForgetPasswordPopup({ showPopup, setShowPopup }) {
             onRequestClose={() => {
                 setShowPopup(false)
             }}
+            style={styles.popupWrapper}
         >
             <BlurView
-                style={styles.popupWrapper}
+                style={styles.blurView}
                 blurType="light"
                 blurAmount={2.5}
                 reducedTransparencyFallbackColor="white"
-            >
-                <View style={styles.popupContainer}>
-                    <View style={styles.popupHeaderContainer}>
-                        <Text style={styles.popupTitleText}>
-                            Forget Password
-                        </Text>
-                    </View>
-                    <View style={styles.popupBodyContainer}>
-                        <Text style={styles.popupBodyText} numberOfLines={3}>
-                            An email has been sent to you Follow direction in
-                            the email to reset password
-                        </Text>
-                        <TouchableOpacity
-                            style={styles.okButton}
-                            onPress={() => {
-                                setShowPopup(false)
-                                navigation.navigate("verification-code")
-                            }}
-                        >
-                            <Text style={styles.okButtonText}>OK</Text>
-                        </TouchableOpacity>
-                    </View>
+            />
+            <View style={styles.popupContainer}>
+                <View style={styles.popupHeaderContainer}>
+                    <Text style={styles.popupTitleText}>Forget Password</Text>
                 </View>
-            </BlurView>
+                <View style={styles.popupBodyContainer}>
+                    <Text style={styles.popupBodyText} numberOfLines={3}>
+                        An email has been sent to you Follow direction in the
+                        email to reset password
+                    </Text>
+                    <TouchableOpacity
+                        style={styles.okButton}
+                        onPress={() => {
+                            setShowPopup(false)
+                            navigation.navigate("verification-code")
+                        }}
+                    >
+                        <Text style={styles.okButtonText}>OK</Text>
+                    </TouchableOpacity>
+                </View>
+            </View>
         </Modal>
     )
 }
@@ -53,12 +51,18 @@ const styles = StyleSheet.create({
     popupWrapper: {
         flex: 1,
         width: "100%",
-        alignItems: "center",
-        justifyContent: "center"
+        position: "relative"
+    },
+    blurView: {
+        flex: 1
     },
     popupContainer: {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: [{ translateX: -162.5 }, { translateY: -107.5 }],
         height: 215,
-        width: "85%",
+        width: 325,
         borderRadius: 12.5,
         backgroundColor: "white",
         flexDirection: "column",
@@ -66,7 +70,8 @@ const styles = StyleSheet.create({
         elevation: 5,
         shadowOffset: { width: 2.5, height: 5 },
         shadowOpacity: 0.3,
-        shadowRadius: 3
+        shadowRadius: 3,
+        zIndex: 10
     },
     popupHeaderContainer: {
         width: "100%",

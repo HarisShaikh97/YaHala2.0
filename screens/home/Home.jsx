@@ -6,6 +6,7 @@ import {
     Image,
     ImageBackground,
     TouchableOpacity,
+    Platform,
     StyleSheet
 } from "react-native"
 import LinearGradient from "react-native-linear-gradient"
@@ -36,7 +37,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderContainer}>
                         <View style={styles.circularSeparator} />
@@ -301,7 +302,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderWrapper}>
                         <View style={styles.sectionHeaderContainer}>
@@ -384,7 +385,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderContainer}>
                         <View style={styles.circularSeparator} />
@@ -532,7 +533,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderContainer}>
                         <View style={styles.circularSeparator} />
@@ -649,7 +650,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderContainer}>
                         <View style={styles.circularSeparator} />
@@ -738,7 +739,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderWrapper}>
                         <View style={styles.sectionHeaderContainer}>
@@ -865,7 +866,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderContainer}>
                         <View style={styles.circularSeparator} />
@@ -924,7 +925,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderContainer}>
                         <View style={styles.circularSeparator} />
@@ -983,7 +984,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderContainer}>
                         <View style={styles.circularSeparator} />
@@ -1044,7 +1045,7 @@ export default function Home() {
                     <Image
                         source={require("../../assets/images/advertisement-banner.png")}
                         style={styles.advertisementBanner}
-                        resizeMode="contain"
+                        resizeMode="stretch"
                     />
                     <View style={styles.sectionHeaderContainer}>
                         <View style={styles.circularSeparator} />
@@ -1103,7 +1104,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         gap: 15,
         paddingHorizontal: 15,
-        paddingTop: 50,
+        paddingTop: Platform.OS === "android" ? 15 : 50,
         paddingBottom: 25
     },
     sectionHeaderWrapper: {
