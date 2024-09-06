@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
     View,
     ScrollView,
@@ -9,11 +9,15 @@ import {
     StyleSheet
 } from "react-native"
 import LinearGradient from "react-native-linear-gradient"
+import GuestUserPopup from "../../components/guest-user-popup/GuestUserPopup"
 import FooterNav from "../../components/footer-nav/FooterNav"
 
 export default function Home() {
+    const [showPopup, setShowPopup] = useState(true)
+
     return (
         <View style={styles.wrapper}>
+            <GuestUserPopup showPopup={showPopup} setShowPopup={setShowPopup} />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.container}>
                     <View style={styles.sectionHeaderContainer}>
