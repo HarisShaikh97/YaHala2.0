@@ -175,10 +175,11 @@ const styles = StyleSheet.create({
     descriptionText: {
         fontSize: 17.5,
         fontFamily: "Genos-Regular",
-        opacity: 0.4,
+        opacity: 0.6,
         marginVertical: 5,
         textAlign: "center",
-        marginHorizontal: 15
+        marginHorizontal: 15,
+        color: "black"
     },
     inputFieldWrapper: {
         width: "100%",
@@ -204,7 +205,8 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: 20,
         fontFamily: "Genos-Regular",
-        lineHeight: 25
+        lineHeight: 25,
+        color: "black"
     },
     showPasswordIcon: {
         height: 22.5,

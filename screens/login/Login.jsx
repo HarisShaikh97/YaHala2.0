@@ -142,7 +142,8 @@ const styles = StyleSheet.create({
         fontFamily: "Genos-Light",
         fontSize: 17.5,
         paddingHorizontal: 10,
-        borderWidth: 1
+        borderWidth: 1,
+        color: "black"
     },
     inputFieldFocused: {
         borderColor: "#316AAC"
@@ -170,7 +171,9 @@ const styles = StyleSheet.create({
     },
     accountText: {
         fontSize: 15,
-        fontFamily: "Genos-Regular"
+        fontFamily: "Genos-Regular",
+        color: "#333333",
+        opacity: 0.8
     },
     signupText: {
         fontSize: 15,

@@ -91,7 +91,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         borderWidth: 1,
         marginTop: 15,
-        marginBottom: 5
+        marginBottom: 5,
+        color: "black"
     },
     inputFieldFocused: {
         borderColor: "#316AAC"
@@ -106,13 +107,15 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontSize: 30,
-        fontFamily: "Genos-Medium"
+        fontFamily: "Genos-Medium",
+        color: "#333333"
     },
     descriptionText: {
         fontSize: 15,
         fontFamily: "Genos-Regular",
-        opacity: 0.4,
-        marginVertical: 5
+        opacity: 0.8,
+        marginVertical: 5,
+        color: "black"
     },
     messageText: {
         fontSize: 12.5,

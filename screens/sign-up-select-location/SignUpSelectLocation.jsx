@@ -266,7 +266,8 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: 17.5,
         fontFamily: "Genos-Light",
-        lineHeight: 20
+        lineHeight: 20,
+        color: "black"
     },
     crossButton: {
         height: 30,
@@ -313,7 +314,8 @@ const styles = StyleSheet.create({
     },
     addressTitleText: {
         fontSize: 20,
-        fontFamily: "Genos-Medium"
+        fontFamily: "Genos-Medium",
+        color: "#1C274C"
     },
     addressListScrollView: {
         flex: 1,
@@ -349,16 +351,19 @@ const styles = StyleSheet.create({
     },
     addressText: {
         fontFamily: "Genos-Regular",
-        color: "#1C274C",
-        opacity: 0.6
+        color: "#1C274C"
     },
     addressNameText: {
         fontSize: 20,
-        lineHeight: 22.5
+        lineHeight: 22.5,
+        color: "#1C274C",
+        opacity: 0.6
     },
     addressCityText: {
         fontSize: 15,
-        lineHeight: 17.5
+        lineHeight: 17.5,
+        color: "#1C274C",
+        opacity: 0.4
     },
     addressListEmptyView: {
         width: 20

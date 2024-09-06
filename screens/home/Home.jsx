@@ -1137,7 +1137,8 @@ const styles = StyleSheet.create({
     headerTitleText: {
         fontSize: 17.5,
         fontFamily: "Genos-Regular",
-        lineHeight: 20
+        lineHeight: 20,
+        color: "black"
     },
     advertisementBanner: {
         height: 150,
@@ -1177,7 +1178,8 @@ const styles = StyleSheet.create({
     postCardUserNameText: {
         fontSize: 17.5,
         fontFamily: "Genos-Regular",
-        lineHeight: 20
+        lineHeight: 20,
+        color: "black"
     },
     postCardDateTimeText: {
         fontSize: 12.5,
@@ -1266,7 +1268,8 @@ const styles = StyleSheet.create({
     postReactionCountText: {
         fontSize: 20,
         fontFamily: "Genos-Light",
-        lineHeight: 22.5
+        lineHeight: 22.5,
+        color: "#1C274C"
     },
     postEngagementItemTab: {
         height: 17.5,

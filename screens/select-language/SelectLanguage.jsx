@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
     headerTitleText: {
         fontSize: 22.5,
         fontFamily: "Genos-Medium",
-        lineHeight: 27.5
+        lineHeight: 27.5,
+        color: "#333333"
     },
     bodyContainer: {
         width: "100%",

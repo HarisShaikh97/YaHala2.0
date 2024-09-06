@@ -451,7 +451,8 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: 17.5,
         fontFamily: "Genos-Light",
-        lineHeight: 20
+        lineHeight: 20,
+        color: "black"
     },
     inputFieldIcon: {
         height: 22.5,

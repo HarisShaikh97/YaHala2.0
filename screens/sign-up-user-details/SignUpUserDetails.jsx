@@ -142,7 +142,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         fontFamily: "Genos-Light",
         fontSize: 17.5,
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        color: "black"
     },
     actionButtonsWrapper: {
         width: "100%",

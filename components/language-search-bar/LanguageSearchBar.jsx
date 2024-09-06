@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: 20,
         fontFamily: "Genos-Light",
-        lineHeight: 25
+        lineHeight: 25,
+        color: "black"
     }
 })

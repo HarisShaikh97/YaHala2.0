@@ -91,7 +91,8 @@ const styles = StyleSheet.create({
         color: "white"
     },
     unSelectedLanguageTitleText: {
-        fontFamily: "Genos-Regular"
+        fontFamily: "Genos-Regular",
+        color: "#333333"
     },
     checkBox: {
         height: 22.5,
