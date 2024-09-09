@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import {
     View,
     ScrollView,
@@ -14,7 +14,13 @@ import GuestUserPopup from "../../components/guest-user-popup/GuestUserPopup"
 import FooterNav from "../../components/footer-nav/FooterNav"
 
 export default function Home() {
-    const [showPopup, setShowPopup] = useState(true)
+    const [showPopup, setShowPopup] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShowPopup(true)
+        }, 1000)
+    }, [])
 
     return (
         <View style={styles.wrapper}>
