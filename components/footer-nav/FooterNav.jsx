@@ -39,6 +39,11 @@ export default function FooterNav() {
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={[styles.navButton, styles.navButtonUnSelected]}
+                    onPress={() => {
+                        if (!route?.name?.includes("policy-and-terms")) {
+                            navigation.navigate("policy-and-terms-list")
+                        }
+                    }}
                 >
                     <Image
                         source={require("../../assets/icons/policy-and-terms.png")}

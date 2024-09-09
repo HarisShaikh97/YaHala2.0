@@ -15,6 +15,7 @@ import SignUpCompleteRegistration from "./screens/sign-up-complete-registration/
 import SignUpVerificationCode from "./screens/sign-up-verification-code/SignUpVerificationCode"
 import SignUpAccountCreated from "./screens/sign-up-account-created/SignUpAccountCreated"
 import Home from "./screens/home/Home"
+import PolicyAndTermsList from "./screens/policy-and-terms-list/PolicyAndTermsList"
 
 const Stack = createNativeStackNavigator()
 
@@ -69,6 +70,10 @@ export default function App() {
                     component={SignUpAccountCreated}
                 />
                 <Stack.Screen name="home" component={Home} />
+                <Stack.Screen
+                    name="policy-and-terms-list"
+                    component={PolicyAndTermsList}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )

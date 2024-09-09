@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, Platform, StyleSheet } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import LanguageSearchBar from "../../components/language-search-bar/LanguageSearchBar"
 import LanguageOption from "../../components/language-option/LanguageOption"
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         alignItems: "center",
         paddingHorizontal: 20,
-        paddingTop: 50
+        paddingTop: Platform.OS === "android" ? 25 : 50
     },
     headerTitleText: {
         fontSize: 22.5,

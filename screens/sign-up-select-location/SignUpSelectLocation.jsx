@@ -6,6 +6,7 @@ import {
     Text,
     TextInput,
     TouchableOpacity,
+    Platform,
     StyleSheet
 } from "react-native"
 import { useNavigation } from "@react-navigation/native"
@@ -224,7 +225,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "column",
-        paddingTop: 50,
+        paddingTop: Platform.OS === "android" ? 25 : 50,
         gap: 15
     },
     headerWrapper: {

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { View, StyleSheet } from "react-native"
+import { View, Platform, StyleSheet } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import ScreenHeader from "../../components/screen-header/ScreenHeader"
 import GenderOption from "../../components/gender-option/GenderOption"
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         paddingHorizontal: 20,
-        paddingTop: 50
+        paddingTop: Platform.OS === "android" ? 25 : 50
     },
     bodyContainer: {
         flex: 1,

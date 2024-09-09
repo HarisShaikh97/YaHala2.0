@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         paddingHorizontal: 20,
-        paddingTop: 50
+        paddingTop: Platform.OS === "android" ? 25 : 50
     },
     bodyContainer: {
         width: "100%",

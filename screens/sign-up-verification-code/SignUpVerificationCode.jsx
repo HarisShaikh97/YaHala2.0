@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         alignItems: "center",
-        paddingTop: 50
+        paddingTop: Platform.OS === "android" ? 25 : 50
     },
     headerTitleText: {
         fontSize: 22.5,

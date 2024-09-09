@@ -5,6 +5,7 @@ import {
     TouchableOpacity,
     Image,
     ImageBackground,
+    Platform,
     StyleSheet
 } from "react-native"
 import { useNavigation } from "@react-navigation/native"
@@ -193,7 +194,7 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
         flexDirection: "column",
-        paddingTop: 50,
+        paddingTop: Platform.OS === "android" ? 25 : 50,
         zIndex: 10
     },
     backButtonContainer: {
